@@ -11,6 +11,7 @@ public class HighwayDrive implements Serializable {
     private LocalDateTime exitedAt;
     private VehicleFamily vehicleFamily;
     private RouteType routeType;
+    private EtcVersion etcVersion;
 
     private Driver driver;
 
@@ -37,6 +38,10 @@ public class HighwayDrive implements Serializable {
         return this.driver;
     }
 
+    public EtcVersion getEtcVersion(){
+    	return this.etcVersion;
+	}
+
     public void setEnteredAt(LocalDateTime enteredAt) {
         this.enteredAt = enteredAt;
     }
@@ -56,6 +61,10 @@ public class HighwayDrive implements Serializable {
     public void setDriver(Driver driver) {
         this.driver = driver;
     }
+
+    public void setEtcVersion(EtcVersion etcVersion){
+    	this.etcVersion = etcVersion;
+	}
 
     public String toString() {
         return "HighwayDrive(enteredAt=" + this.getEnteredAt() + ", exitedAt=" + this.getExitedAt() + ", vehicleFamily=" + this.getVehicleFamily() + ", routeType=" + this.getRouteType() + ", driver=" + this.getDriver() + ")";
